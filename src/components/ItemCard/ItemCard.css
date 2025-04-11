@@ -1,0 +1,23 @@
+.item-card {
+    width: 120px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 8px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+    cursor: grab;
+  }
+  
+  .item-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .item-image {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 8px;
+  }

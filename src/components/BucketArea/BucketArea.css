@@ -1,0 +1,39 @@
+.bucket-area {
+    border: 2px dashed #999;
+    margin: 30px 10px;
+    padding: 20px;
+    min-height: 150px;
+    text-align: center;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+  }
+  
+  .bucket-title {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #444;
+  }
+  
+  .bucket-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .bucket-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .bucket-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+  }
+  
+  .empty-text {
+    color: #aaa;
+  }
+  

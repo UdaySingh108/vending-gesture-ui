@@ -1,0 +1,9 @@
+.right-panel {
+    flex: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-left: 1px solid #ccc;
+    min-width: 300px;
+    overflow-y: auto;
+  }
+  
