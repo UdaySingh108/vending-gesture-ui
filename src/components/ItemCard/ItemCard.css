@@ -1,23 +1,29 @@
 .item-card {
     width: 120px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
     padding: 10px;
-    margin: 8px;
-    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease;
+    text-align: center;
     cursor: grab;
+    transition: transform 0.2s ease;
   }
   
   .item-card:hover {
     transform: scale(1.05);
   }
   
-  .item-image {
-    width: 60px;
-    height: 60px;
+  .item-card img {
+    width: 80px;
+    height: 80px;
     object-fit: contain;
     margin-bottom: 8px;
+  }
+  
+  .item-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: #333;
   }

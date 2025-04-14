@@ -1,9 +1,21 @@
 import React from 'react';
 import './BucketArea.css';
 
-const BucketArea = ({ bucketItems }) => {
+const BucketArea = ({ bucketItems, onItemDrop }) => {
+  const handleDragOver = (e) => {
+    e.preventDefault(); // Allow drop
+  };
+
+  const handleDrop = (e) => {
+    e.preventDefault();
+    const itemData = e.dataTransfer.getData("application/json");
+    if (!itemData) return;
+    const item = JSON.parse(itemData);
+    onItemDrop(item); // This should trigger state update in App
+  };
+
   return (
-    <div className="bucket-area">
+    <div className="bucket-area" onDragOver={handleDragOver} onDrop={handleDrop}>
       <h2 className="bucket-title">Bucket</h2>
       <div className="bucket-items">
         {bucketItems.length === 0 ? (
