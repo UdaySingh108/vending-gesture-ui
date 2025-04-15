@@ -25,8 +25,8 @@ const itemsData = [
       items: [
         { id: 11, name: "Cup Noodles", price: 35, image: "/images/cup.png" },
         { id: 12, name: "Wraps", price: 40, image: "/images/wrap.png" },
-        { id: 13, name: "Sandwiches", price: 15, image: "/images/sanwiches.png" },
-        { id: 14, name: "Oatmeal Cup", price: 35, image: "/images/soda.png" },
+        { id: 13, name: "Sandwiches", price: 15, image: "/images/sandwich.png" },
+        { id: 14, name: "Oatmeal Cup", price: 35, image: "/images/oats.png" },
        
       ],
     },
@@ -35,8 +35,8 @@ const itemsData = [
       items: [
         { id: 15, name: "Yogurt", price: 35, image: "/images/yogurt.png" },
         { id: 16, name: "Flavoured milk", price: 40, image: "/images/milk.png" },
-        { id: 17, name: "Cheese", price: 15, image: "/images/water.png" },
-        { id: 18, name: "Butter", price: 35, image: "/images/soda.png" },
+        { id: 17, name: "Cheese", price: 15, image: "/images/cheese.png" },
+        { id: 18, name: "Butter", price: 35, image: "/images/butter.png" },
        
       ],
     },
