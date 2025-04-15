@@ -23,7 +23,7 @@ const itemsData = [
      {
       name: "Packaged Meals",
       items: [
-        { id: 4, name: "Cup Noodles", price: 35, image: "/images/soda.png" },
+        { id: 4, name: "Cup Noodles", price: 35, image: "/images/cup.png" },
         { id: 5, name: "Wraps", price: 40, image: "/images/juice.png" },
         { id: 6, name: "Sandwiches", price: 15, image: "/images/water.png" },
         { id: 11, name: "Oatmeal Cup", price: 35, image: "/images/soda.png" },
