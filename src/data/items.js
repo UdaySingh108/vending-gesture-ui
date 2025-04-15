@@ -6,9 +6,7 @@ const itemsData = [
         { id: 2, name: "Cookies", price: 25, image: "/images/cookies.jpg" },
         { id: 3, name: "Chocolate", price: 30, image: "/images/chocolates.jpg" },
         { id: 7, name: "Nuts", price: 40, image: "/images/nuts.jpg" },
-        { id: 8, name: "Soda", price: 35, image: "/images/soda.png" },
-        { id: 9, name: "Juice", price: 40, image: "/images/juice.png" },
-        { id: 10, name: "Water", price: 15, image: "/images/water.png" },
+        
       ],
     },
     {
@@ -22,6 +20,7 @@ const itemsData = [
         { id: 13, name: "Water", price: 15, image: "/images/water.png" },
       ],
     },
+    
   ];
   
   export default itemsData;
