@@ -1,9 +1,35 @@
 .right-panel {
-    flex: 1;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-left: 1px solid #ccc;
-    min-width: 300px;
-    overflow-y: auto;
-  }
-  
+  flex: 1;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-left: 1px solid #ccc;
+  width:max-content;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden; /* Prevent outer scroll */
+}
+
+.right-panel-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  flex-basis: auto;
+}
+
+/* Make BucketArea and CameraFeed share space */
+.right-panel-top > * {
+  flex: 1;
+  min-height: 250px;
+  background: white;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart section scrolls if content overflows */
+.cart-section {
+  margin-top: 20px;
+  overflow-y: auto;
+  flex-grow: 1;
+}

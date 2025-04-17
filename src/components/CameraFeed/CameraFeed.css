@@ -1,0 +1,15 @@
+.camera-feed {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.camera-feed img {
+  width: 100%;
+  max-width: 400px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}

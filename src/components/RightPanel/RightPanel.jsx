@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import BucketArea from '../BucketArea/BucketArea';
 import CartSection from '../CartSection/CartSection';
+import CameraFeed from '../CameraFeed/CameraFeed'; // ✅ Import camera feed
 import './RightPanel.css';
 
 const RightPanel = ({ onItemDrop }) => {
@@ -25,12 +26,12 @@ const RightPanel = ({ onItemDrop }) => {
     setCartItems([]);
   };
 
-  // ✅ Checkout (you can customize this later)
+  // ✅ Checkout
   const handleCheckout = () => {
     alert("Checkout functionality coming soon!");
   };
 
-  // ✅ Calculate Total Cost
+  // ✅ Total
   const totalCost = cartItems.reduce(
     (total, item) => total + item.price * item.quantity,
     0
@@ -38,7 +39,14 @@ const RightPanel = ({ onItemDrop }) => {
 
   return (
     <div className="right-panel">
-      <BucketArea bucketItems={cartItems} onItemDrop={handleAddToCart} />
+      {/* Container for the top section of the right panel */}
+      <div className="right-panel-top">
+        {/* BucketArea component to display items in the bucket */}
+        <BucketArea bucketItems={cartItems} onItemDrop={handleAddToCart} />
+        {/* CameraFeed component to display the camera feed */}
+        <CameraFeed />{/* ✅ Camera appears next to bucket */}
+      </div>
+      {/* CartSection component to display cart items, total cost, and actions */}
       <CartSection
         cartItems={cartItems}
         totalCost={totalCost}
