@@ -8,6 +8,16 @@ import io from 'socket.io-client';
 function App() {
   const [bucketItems, setBucketItems] = useState([]);
 
+  const handleClearCart = () => {
+    console.log('Clearing cart from App');
+    setBucketItems([]);
+  };
+  
+  const handleCheckout = () => {
+    alert('Checking out');
+    // Add checkout logic here if needed
+  };
+
   const handleItemDrop = (item) => {
     console.log("handleItemDrop called with:", item);
     setBucketItems(prevItems => {
@@ -40,11 +50,18 @@ function App() {
         console.log('Dragging at position:', data.x, data.y);
       } else if (data.type === 'drop') {
         console.log('Dropped item at:', data.x, data.y);
-
         if (data.inBucket) {
           const droppedItem = { id: 1, name: 'Item', price: 10 }; // Simulate item
           handleItemDrop(droppedItem);
         }
+      }
+      else if(data.type === 'clear_cart') {
+        console.log('Clearing cart');
+        setBucketItems([]);
+      }
+      else if(data.type === 'checkout') {
+        alert('Checking out');
+        // Handle checkout logic here
       }
     });
 
@@ -60,7 +77,12 @@ function App() {
   return (
     <div className="app-container">
       <LeftPanel items={itemsData} />
-      <RightPanel bucketItems={bucketItems} onItemDrop={handleItemDrop} />
+      <RightPanel
+        bucketItems={bucketItems}
+        onItemDrop={handleItemDrop}
+        onClearCart={handleClearCart}
+        onCheckout={handleCheckout}
+      />
     </div>
   );
 }
