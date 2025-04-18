@@ -7,6 +7,7 @@ import io from 'socket.io-client';
 
 function App() {
   const [bucketItems, setBucketItems] = useState([]);
+  const [showAlert, setShowAlert] = useState(false);
 
   const handleClearCart = () => {
     console.log('Clearing cart from App');
@@ -60,8 +61,11 @@ function App() {
         setBucketItems([]);
       }
       else if(data.type === 'checkout') {
-        alert('Checking out');
-        // Handle checkout logic here
+        console.log('Checkout gesture detected');
+        setShowAlert(true);
+        setBucketItems([]);
+        setTimeout(() => setShowAlert(false), 3000); // Hide after 3 sec
+        
       }
     });
 
@@ -75,6 +79,12 @@ function App() {
   }, []);
 
   return (
+    <>
+    {showAlert && (
+      <div className="custom-alert">
+        Checkout successful!
+      </div>
+    )}
     <div className="app-container">
       <LeftPanel items={itemsData} />
       <RightPanel
@@ -84,6 +94,8 @@ function App() {
         onCheckout={handleCheckout}
       />
     </div>
+    </>
+    
   );
 }
 

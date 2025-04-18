@@ -46,4 +46,25 @@
   background-color: #fff;
   font-family: sans-serif;
 }
+.custom-alert {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 2px solid #d7300f;
+  color: #4caf50;
+  padding: 20px 30px;
+  border-radius: 12px;
+  font-size: 30px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  animation: fadeOut 3s forwards;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
 
