@@ -15,6 +15,7 @@ const RightPanel = ({ bucketItems, onItemDrop, onClearCart, onCheckout }) => {
       <div className="right-panel-top">
         {/* BucketArea shows current cart items and handles new drops */}
         <BucketArea bucketItems={bucketItems} onItemDrop={onItemDrop} />
+        
         {/* Live camera feed from gesture controller */}
         {<CameraFeed />}
       </div>

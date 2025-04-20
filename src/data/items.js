@@ -16,7 +16,7 @@ const itemsData = [
       { id: 7, name: "Water", price: 15, image: "/images/water.png" },
       { id: 8, name: "cold drink", price: 35, image: "/images/cold.jpg" },
       { id: 9, name: "Juice", price: 40, image: "/images/juice.png" },
-      { id: 10, name: "Hot chocolate", price: 15, image: "/images/hot.jpg" },
+      
     ],
   },
   {
